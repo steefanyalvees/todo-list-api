@@ -3,6 +3,7 @@ package com.todo_list_api.controller;
 import com.todo_list_api.entity.Todo;
 import com.todo_list_api.service.TodoService;
 import jakarta.annotation.PostConstruct;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,7 +18,7 @@ public class TodoController {
         this.todoService = todoService;
     }
     @PostMapping
-    List<Todo> create(@RequestBody Todo todo){
+    List<Todo> create(@RequestBody @Valid Todo todo){
         return todoService.create(todo);
     }
     @GetMapping
