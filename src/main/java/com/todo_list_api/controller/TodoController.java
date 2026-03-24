@@ -2,12 +2,13 @@ package com.todo_list_api.controller;
 
 import com.todo_list_api.entity.Todo;
 import com.todo_list_api.service.TodoService;
+import jakarta.annotation.PostConstruct;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/todo")
+@RequestMapping("/todos")
 public class TodoController {
 
     private TodoService todoService;
