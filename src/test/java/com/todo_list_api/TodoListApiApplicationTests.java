@@ -9,7 +9,8 @@ import org.springframework.test.web.reactive.server.WebTestClient;
 import static net.bytebuddy.matcher.ElementMatchers.isArray;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.jsonPath;
 
-@SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+
 class TodoListApiApplicationTests {
 @Autowired
 private WebTestClient webTestClient;
